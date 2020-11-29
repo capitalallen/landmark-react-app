@@ -15,7 +15,7 @@ function ConfirmLibraryImage({ route, navigation }) {
   // console.log(base64);
   const getWiki = async (name) => {
     // top = this;
-    var data = await fetch("https://us-central1-ace-resolver-237602.cloudfunctions.net/first-function/getlandmark?name="+name)
+    var data = await fetch("="+name)
     .then((res)=> res.json())
     .then((json) => {
       return {
@@ -33,7 +33,7 @@ function ConfirmLibraryImage({ route, navigation }) {
   const getResult = async () => {
     let name = "";
     try {
-      let key = "AIzaSyBfXxyl7OhrX4eBcPdYhN87hsFaj_MK-Uo";
+      let key = "";
       let googleVisionRes = await fetch(
         "https://vision.googleapis.com/v1/images:annotate?key=" +
           key,
