@@ -1,0 +1,20 @@
+version: '3'
+services:
+    nodejs:
+        build:
+            context: ./backend/
+            dockerfile: Dockerfile 
+        container_name: model-recog-microservice 
+        restart: always 
+        environment: 
+            - HOST=mongo
+        ports:
+            - '3000:3000'
+        depends_on: [mongo]
+    mongo:
+        container_name: mongo
+        image: mongo
+        ports: 
+            - '27017:27017'
+        volumes:
+            - ./data:/data/db 
