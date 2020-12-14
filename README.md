@@ -1,6 +1,7 @@
 # Landmark
 
 A react native application using machine learning to identify monuments and landmark sites, and offer further information and links to educate the user on historical and famous landmarks.
+[Google Play Store](https://play.google.com/store/apps/details?id=com.capitalallen.landmarkapp)
 
 ### Instructions
 
